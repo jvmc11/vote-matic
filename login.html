@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">Online Voting System</div>
+    <div class="card-container">
+        <div class="card">
+            <div class="front">
+                <form action="#">
+                <div class="login-title">Log In</div>
+                <div class="content">
+                    <div class="details">Username</div>
+                    <input type="text" class="input" placeholder="username" >
+                </div>
+                <div class="content">
+                    <div class="details">Password</div>
+                    <input type="password" class="input" placeholder="password" id="pass">
+                    <ion-icon name="eye" aria-hidden="true" id="loginID" onclick="togle()"></ion-icon>
+                </div>
+                <div class="forgot"><a href="#">FORGOT PASSWORD?</a></div>
+                <button class="btn"><a href="home.html">LOGIN</a></button>
+                
+                <div class="signup">Didn't have an Account? <a href="#" >Sign Up</a></div>
+            </form>
+            </div>
+            <div class="back">
+                <div class="back-container">
+                <form action="">
+                    <div class="regis">Registration</div>
+              
+                    <div class="user-details">
+                       <div class="input-box">
+                           <span class="input-box-details"> Name</span>
+                           <input type="text" placeholder="Surname, First Name MI." id="name" required>
+                           <ion-icon name="checkmark" class="check"></ion-icon>
+                       </div>
+                       <div class="input-box">
+                           <span class="input-box-details">Username</span>
+                           <input type="text" placeholder="Username" id="username" required>
+                           <ion-icon name="checkmark" class="check"></ion-icon>
+                       </div>
+                       <div class="input-box">
+                           <span class="input-box-details">Phone Number</span>
+                           <input type="text" placeholder="Phone Number" id="phoneNumber" required>
+                           <ion-icon name="checkmark" class="check"></ion-icon>
+                       </div>
+                       <div class="input-box">
+                           <span class="input-box-details">Email</span>
+                           <input type="text" placeholder="@gmail.com" id="email" required>
+                           <ion-icon name="checkmark" class="check"></ion-icon>
+                       </div>
+                       <div class="input-box">
+                           <span class="input-box-details">Password</span>
+                           <input type="password" placeholder="8-12 characters" id="pass1" required>
+                       </div>
+                       <div class="input-box">
+                           <span class="input-box-details">Confirm Password</span>
+                           <input type="password" placeholder="Confirm Password" id="confirm" required>
+                           <ion-icon name="eye" id="registerID" onclick="show()"></ion-icon>
+                       </div>
+                    </div>
+                    <button class="register"><a href="#">Register</a></button>
+                
+                </form>
+           
+                <div class="login">Already have an Account?    <a href="#" >LogIn</a></div></div>
+            
+            </div>
+    </div>
+</body>
+<script>
+    let signup = document.querySelector(".signup");
+    let login = document.querySelector(".login");
+    let card = document.querySelector(".card");
+
+    signup.onclick = function(){
+        card.classList.toggle("active");
+    }
+    login.onclick = function(){
+        card.classList.toggle("active");
+    }
+    
+
+
+    function togle(){
+        var state = document.getElementById("pass");
+        if (state.type === "password") {
+        state.type = "text";  
+        document.getElementById("loginID").style.color='blue';  
+        }   
+    else {
+        state.type = "password";
+      document.getElementById("loginID").style.color='#3F4E4F'; 
+        }
+    }
+
+    function show(){
+        var pass1 = document.getElementById("pass1");
+        var confirm = document.getElementById("confirm");
+        if (pass1.type === "password" && confirm.type === "password") {
+            pass1.type = "text";  
+            confirm.type = "text";
+        document.getElementById("registerID").style.color='#DCD7C9 ';  
+        }   
+    else {
+        pass1.type = "password";
+        confirm.type = "password";
+      document.getElementById("registerID").style.color='#3F4E4F'; 
+        }
+    }
+
+    let box = document.querySelector(".input-box");
+    var name = document.getElementById("name");
+    var username = document.getElementById("username");
+    var phoneNumber = document.getElementById("phoneNumber");
+    var email = document.getElementById("email");
+
+
+</script>
+</html>

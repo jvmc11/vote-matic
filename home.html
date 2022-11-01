@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">Online Voting System</div>
+    <div class="main">
+        <div class="options-container">
+        <div class="options">
+            <ion-icon name="create"></ion-icon>
+            <span class="name">Create</span>
+        </div>
+        <div class="options">
+            <ion-icon name="people"></ion-icon>
+            <span class="name">Join</span>
+        </div>
+        <div class="options">
+            <ion-icon name="analytics"></ion-icon>
+            <span   class="name">Result</span>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="title">
+            <span>DASHBOARD</span>
+            <ion-icon name="grid" class="menu"></ion-icon>
+        </div>
+        <ul>
+            <li>
+                <ion-icon name="home-outline" class="icon"></ion-icon>
+                <span class="nav">
+                    <a href="#" >Home</a>
+                </span>
+            </li>
+            <li>
+                <ion-icon name="notifications-outline" class="icon"></ion-icon>
+                <span class="nav">
+                    <a href="#" >Notification</a>
+                </span>
+            </li>
+            <li>
+                <ion-icon name="analytics-outline" class="icon"></ion-icon>
+                <span class="nav">
+                    <a href="#" >Results</a>
+                </span>
+            </li>
+            <li>
+                <ion-icon name="mail-outline" class="icon"></ion-icon>
+                <span class="nav">
+                    <a href="#" >Messages</a>
+                </span>
+            </li>
+            <li>
+                <ion-icon name="settings-outline" class="icon"></ion-icon>
+                <span class="nav">
+                    <a href="#" >Settings</a>
+                </span>
+            </li>
+            <li>
+                <ion-icon name="power" class="icon"></ion-icon>
+                <span class="nav">
+                    <a href="login.html">Log Out</a>
+                </span>
+            </li>
+        </ul>
+
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a href="#" id="about">About Us</a></li>
+            <li><a href="#" id="contact">Contact Information</a></li>
+            <li><a href="#" id="social">Social Media</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector(".menu");
+    let container = document.querySelector(".container");
+
+    btn.onclick = function(){
+        container.classList.toggle("active");
+    }
+</script>
+</html>
+</html>
